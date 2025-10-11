@@ -37,7 +37,7 @@ public class array_op {
             arr[i + 1] = arr[i];
         }
 
-        arr[pos - 1] = elem;   // ✅ fixed off-by-one index
+        arr[pos] = elem;   // ✅ fixed off-by-one index
         num++;
 
         System.out.print("new array: ");
