@@ -19,25 +19,15 @@ public class array {
 
             System.out.println(arr[i]);
         }
-        System.out.print("enter pos you want to insert: ");
+        System.out.println("pos you want to delete: ");
         int pos=sc.nextInt();
-        
-        if(pos>num||pos<0){
-            System.out.println("invalid");
-            return;
-        }
-        System.out.print("enter elem you want to insert: ");
-        int elem=sc.nextInt();
-        for(int i=num-1;i>=pos;i--){
-            arr[i+1]=arr[i];
+        for(int i=pos;i<num-1;i++){
+            arr[i]=arr[i+1];
             
-        }
-        arr[pos]=elem;
-        num++;
-        System.out.println("array after insertion: ");
+        }num--;
+        System.out.print("new set:");
         for(int i=0;i<num;i++){
-            System.out.println(arr[i]);
+            System.out.print(arr[i]);
         }
-
     }
 }

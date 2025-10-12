@@ -13,19 +13,20 @@ public class array_op {
             return;
         }
 
-        System.out.print("enter the elem: ");
+        System.out.print("enter the elements: ");
         for (int i = 0; i < num; i++) {
             arr[i] = sc.nextInt();
         }
 
+        System.out.print("array before insertion: ");
         for (int i = 0; i < num; i++) {
             System.out.print(arr[i] + " ");
         }
 
-        System.out.print("\nenter pos: ");
+        System.out.print("\nenter index where to insert (0-based): ");
         int pos = sc.nextInt();
 
-        if (pos > num + 1 || pos <= 0) {   // ✅ fixed bounds
+        if (pos > num || pos < 0) {   // ✅ fixed bounds for 0-based index
             System.out.print("invalid");
             return;
         }
@@ -33,14 +34,15 @@ public class array_op {
         System.out.print("enter element: ");
         int elem = sc.nextInt();
 
-        for (int i = num - 1; i >= pos - 1; i--) {  // shifting
+        // ✅ shift elements right starting from that index
+        for (int i = num - 1; i >= pos; i--) {
             arr[i + 1] = arr[i];
         }
 
-        arr[pos] = elem;   // ✅ fixed off-by-one index
+        arr[pos] = elem;   // ✅ insert at that index
         num++;
 
-        System.out.print("new array: ");
+        System.out.print("array after insertion: ");
         for (int i = 0; i < num; i++) {
             System.out.print(arr[i] + " ");
         }
