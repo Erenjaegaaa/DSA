@@ -23,26 +23,33 @@ public class array_oper{
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
-        }
-        switch(choice){
+            switch(choice){
             case 1:
             System.out.print("enter pos you want to enter: ");
             int pos=sc.nextInt();
             if(pos>num||pos<0){
                 System.out.print("invalid ");
-                return;
+                break;
             }
             System.out.print("enter element you want to enter: ");
             int elem=sc.nextInt();
             for(int i=num;i>=pos;i--){
                 arr[i+1]=arr[i];
-                arr[i]=elem;
+                
 
-            }num++;
+            }arr[pos]=elem;
+            num++;
             break;
 
             default:
             System.out.print("invalid choice");
+            case 3:
+            for(int i=0;i<num;i++){
+                System.out.print(arr[i]);
+            }
         }
+        
     }
+}
+
 }
