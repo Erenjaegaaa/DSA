@@ -1,0 +1,1 @@
+            int removed=top.data;
