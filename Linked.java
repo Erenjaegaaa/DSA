@@ -103,6 +103,8 @@ public class Linked {
         list2.end(25);
         list2.end(35);
         System.out.println(list1.head.data);
+        list1.traverse();
+        list2.traverse();
         list1.merge(list1.head,list2.head);
         list1.traverse();
 
