@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Queueq {
     
     int capacity;
-    int top;
+    
     int[]queue;
     int front;
     int rear;
